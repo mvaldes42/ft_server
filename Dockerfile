@@ -17,14 +17,14 @@ LABEL "maintainer"="mvaldes" "project_name"="ft_server"
 
 EXPOSE 80 443
 
-RUN apt-get update && apt-get install \
-	nginx -y && \
+RUN apt-get update && apt-get install -y \
+	nginx && \
 	apt-get clean && rm -rf /var/lib/apt/lists/*
 
 RUN     echo "daemon off;" >> /etc/nginx/nginx.conf && \
         rm var/www/html/index.nginx-debian.html
 
-#COPY	srcs/nginx/*.conf /tmp/
+# Je copie les configurations et scripts de mon système hôte vers mon image
 
 # Giving nginx's user-group rights over page files
 #RUN	chown -R www-data:www-data /var/www/html/*
