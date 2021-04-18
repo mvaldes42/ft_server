@@ -12,6 +12,8 @@
 
 FROM debian:buster
 
+EXPOSE 80 443
+
 ADD	srcs /usr/srcs/
 
 RUN	apt-get update && apt-get install -y \
