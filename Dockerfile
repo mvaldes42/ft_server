@@ -12,18 +12,17 @@
 
 FROM debian:buster
 
-#ADD	srcs /usr/local/srcs/
+ADD	srcs /usr/srcs/
 
 RUN	apt-get update && apt-get install -y \
-	nginx && \
+	nginx \
 	# mariadb-server \
 	# php-mbstring php-fpm \
-	# wget \
+	wget && \
 	# php-mysql && \
 	apt-get clean && rm -rf /var/lib/apt/lists/*
 
-RUN	rm var/www/html/index.nginx-debian.html
-#echo "daemon off;" >> /etc/nginx/nginx.conf && \
+# 	rm var/www/html/index.nginx-debian.html
 	# mv /usr/local/srcs/nginx.conf /etc/nginx/sites-available/ft_server && \
 	# ln -s /etc/nginx/sites-available/foo /etc/nginx/sites-enabled/ft_server && \
 	# rm -rf /etc/nginx/sites-enabled/default
@@ -37,7 +36,6 @@ RUN	rm var/www/html/index.nginx-debian.html
 
 #RUN	chown -R www-data:www-data /var/www/html/*
 
-EXPOSE	80
+# EXPOSE	80
 
-RUN	service nginx start
-	# service mysql start
+CMD bash usr/srcs/start.sh
