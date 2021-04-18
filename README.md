@@ -1,16 +1,19 @@
 # FT_SERVER
 
-## COMMANDS
-`docker build -t mvaldes_image .`
+### Utils
+`docker ps -a` list all containers
+`docker images -a` list all images
 
-`docker images`
+### Build an image
+`docker build -t server_img .`
 
-`docker create --tty --interactive --name="mvaldes_container" mvaldes_image`
+### Create & start a container
+`docker create --tty --interactive --name="server_ctn" server_img`
+`docker start server_ctn`
 
-`docker ps -a`
-
-`docker start mvaldes_container`
-
-#docker run --name aname -it -p 80:80 -p 443:443 name
-
-arreter proprement `docker stop` et limiter`docker kill`
+### Stop, delete and clean
+`docker system prune -f -a` to clean unused objects
+`docker container prune`to remove all stopped containers
+`docker container stop $(docker container ls -aq)` stop all containers
+`docker container rm $(docker container ls -aq)`remove all containers
+`docker image prune -a`remove all unused imagesc

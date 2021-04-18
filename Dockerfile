@@ -38,4 +38,4 @@ RUN	apt-get update && apt-get install -y \
 
 # EXPOSE	80
 
-CMD bash usr/srcs/start.sh
+CMD bash usr/srcs/init.sh
