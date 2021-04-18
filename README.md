@@ -4,9 +4,9 @@
 ### Utils
 `docker ps -a` list all containers <br />
 `docker images -a` list all images <br />
-`sed -i -r 's/autoindex on/autoindex off/' /etc/nginx/sites-available/ft_server && service nginx reload` switch to autoindex off
 
-bash /usr/srcs/autoindex_switch.sh
+### Turn on/off autoindex
+`bash /usr/srcs/autoindex_switch.sh`
 
 ### Build an image
 `docker build -t server_img .`
