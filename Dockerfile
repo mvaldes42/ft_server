@@ -22,11 +22,6 @@ RUN	apt-get update && apt-get install -y \
 	# php-mysql && \
 	apt-get clean && rm -rf /var/lib/apt/lists/*
 
-# 	rm var/www/html/index.nginx-debian.html
-	# mv /usr/local/srcs/nginx.conf /etc/nginx/sites-available/ft_server && \
-	# ln -s /etc/nginx/sites-available/foo /etc/nginx/sites-enabled/ft_server && \
-	# rm -rf /etc/nginx/sites-enabled/default
-
 #PHP MY ADMIN
 # RUN	wget https://www.phpmyadmin.net/downloads/phpMyAdmin-latest-english.tar.gz && \
 # 	tar xvf phpMyAdmin-latest-english.tar.gz && \
@@ -35,7 +30,5 @@ RUN	apt-get update && apt-get install -y \
 # 	rm -rf phpMyAdmin-latest-english.tar.gz
 
 #RUN	chown -R www-data:www-data /var/www/html/*
-
-# EXPOSE	80
 
 CMD bash usr/srcs/init.sh
