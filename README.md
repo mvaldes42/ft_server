@@ -13,7 +13,7 @@
 
 ### Stop, delete and clean
 `docker system prune -f -a` to clean unused objects <br />
-`docker container prune`to remove all stopped containers <br />
+`docker container prune` to remove all stopped containers <br />
 `docker container stop $(docker container ls -aq)` stop all containers <br />
-`docker container rm $(docker container ls -aq)`remove all containers <br />
+`docker container rm $(docker container ls -aq)` remove all containers <br />
 `docker image prune -a`remove all unused images <br />
