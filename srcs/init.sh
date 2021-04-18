@@ -18,6 +18,12 @@ openssl req -newkey rsa:4096 -x509 -sha256 -days 365 -nodes \
 -keyout /etc/nginx/ssl/ft_server.key \
 -subj "/C=FR/ST=Paris/L=Paris/O=42/OU=mvaldes/CN=ft_server"
 
+#phpMyAdmin
+wget https://www.phpmyadmin.net/downloads/phpMyAdmin-latest-english.tar.gz && \
+tar xvf phpMyAdmin-latest-english.tar.gz && \
+mv phpMyAdmin-*/ /var/www/html/phpmyadmin && \
+mv usr/local/srcs/phpmyadmin_config.inc.php /var/www/html/phpmyadmin && \
+rm -rf phpMyAdmin-latest-english.tar.gz
 
 service mysql start
 service php7.3-fpm start

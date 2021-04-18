@@ -18,15 +18,9 @@ RUN	apt-get update && apt-get install -y \
 	nginx \
 	mariadb-server \
 	php-fpm php-mysql \
+	php-json php-mbstring \
 	wget && \
 	apt-get clean && rm -rf /var/lib/apt/lists/*
-
-#PHP MY ADMIN
-# RUN	wget https://www.phpmyadmin.net/downloads/phpMyAdmin-latest-english.tar.gz && \
-# 	tar xvf phpMyAdmin-latest-english.tar.gz && \
-# 	mv phpMyAdmin-*/ /var/www/html/phpmyadmin && \
-# 	mv usr/local/srcs/phpmyadmin_config.inc.php /var/www/html/phpmyadmin && \
-# 	rm -rf phpMyAdmin-latest-english.tar.gz
 
 #RUN	chown -R www-data:www-data /var/www/html/*
 
