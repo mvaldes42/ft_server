@@ -16,10 +16,9 @@ ADD	srcs /usr/srcs/
 
 RUN	apt-get update && apt-get install -y \
 	nginx \
-	# mariadb-server \
-	# php-mbstring php-fpm \
+	mariadb-server \
+	php-fpm php-mysql \
 	wget && \
-	# php-mysql && \
 	apt-get clean && rm -rf /var/lib/apt/lists/*
 
 #PHP MY ADMIN
