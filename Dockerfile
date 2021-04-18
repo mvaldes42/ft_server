@@ -17,11 +17,9 @@ ADD	srcs /usr/srcs/
 RUN	apt-get update && apt-get install -y \
 	nginx \
 	mariadb-server \
-	php-fpm php-mysql \
-	php-json php-mbstring \
+	php-cli php-fpm php-json php-pdo php-mysql php-zip php-gd  php-mbstring \
+	php-curl php-xml php-pear php-bcmath \
 	wget && \
 	apt-get clean && rm -rf /var/lib/apt/lists/*
-
-#RUN	chown -R www-data:www-data /var/www/html/*
 
 CMD bash usr/srcs/init.sh
