@@ -6,7 +6,7 @@
 
 ### Turn on/off autoindex
 `docker exec -it server_ctn /bin/bash` <br />
-`sh usr/srcs:autoindex_switch.sh`
+`sh usr/srcs/autoindex_switch.sh`
 
 ### Stop, delete and clean all
 `sh clean.sh`
