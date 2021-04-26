@@ -3,6 +3,8 @@
 ## HOW TO RUN THE PROJECT
 ### Start the container
 `sh runs.sh`
+(if port 80 is already in use in the Ubuntu VM, use : <br />
+`sudo ss -lptn 'sport = :80'` and check it with `ps -aux | grep -E '80|443'`)
 
 ### Turn on/off autoindex
 `docker exec -it server_ctn /bin/bash` <br />
@@ -37,3 +39,4 @@
 * Install phpMyAdmin on Debian 10 [here](https://www.itzgeek.com/how-tos/linux/debian/how-to-install-phpmyadmin-with-nginx-on-debian-10.html) or [here](https://www.digitalocean.com/community/tutorials/how-to-install-phpmyadmin-from-source-debian-10) <br />
 * [Install WordPress with LEMP](https://www.digitalocean.com/community/tutorials/how-to-install-wordpress-with-lemp-nginx-mariadb-and-php-on-debian-10) <br />
 * [Create a self signed ssl certificate for nginx on Debian 10](https://www.digitalocean.com/community/tutorials/how-to-create-a-self-signed-ssl-certificate-for-nginx-on-debian-10) <br />
+* [Install Docker on Ubuntu](https://www.digitalocean.com/community/tutorials/how-to-install-and-use-docker-on-ubuntu-18-04) <br />
