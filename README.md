@@ -1,21 +1,29 @@
 # FT_SERVER
 
+## HOW TO RUN THE PROJECT
+### Start the container
+`sh runs.sh`
+
+### Turn on/off autoindex
+`docker exec -it server_ctn /bin/bash` <br />
+`sh usr/srcs:autoindex_switch.sh`
+
+### Stop, delete and clean all
+`sh clean.sh`
+
 ## COMMANDS
 ### Utils
 `docker ps -a` list all containers <br />
 `docker images -a` list all images <br />
 
-### Turn on/off autoindex
-`bash /usr/srcs/autoindex_switch.sh`
-
-### Build an image
+### (alternative) Build an image
 `docker build -t server_img .`
 
-### Create & start a container
+### (alternative) Create & start a container
 `docker create --tty --interactive --name="server_ctn" server_img` <br />
 `docker start server_ctn`
 
-### Stop, delete and clean
+### (alternative) Stop, delete and clean
 `docker system prune -f -a` to clean unused objects <br />
 `docker container prune` to remove all stopped containers <br />
 `docker container stop $(docker container ls -aq)` stop all containers <br />
