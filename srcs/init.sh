@@ -9,7 +9,6 @@ chmod -R 755 /var/www/*
 cp ./usr/srcs/nginx.conf /etc/nginx/sites-available/ft_server
 ln -s /etc/nginx/sites-available/ft_server /etc/nginx/sites-enabled/
 rm /etc/nginx/sites-enabled/default
-# cp ./usr/srcs/info.php /var/www/ft_server/info.php
 
 #SSL
 mkdir /etc/nginx/ssl
