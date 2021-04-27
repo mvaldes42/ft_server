@@ -2,14 +2,17 @@
 
 ## HOW TO RUN THE PROJECT
 ### Start the container
-Check if ports 80 and 443 are already used : `sudo lsof -i -P -n | grep LISTEN `<br />
-Close services that use those ports : `sudo service <nginx> stop`<br />
+Check if ports 80 and 443 are already used : <br />
+`sudo lsof -i -P -n | grep LISTEN `<br />
+Close those services : <br />
+`sudo service <nginx> stop`<br />
 
-Then make and run container: `sh runs.sh`
+Then make and run container : <br />
+`sh run.sh`
 
 ### Turn on/off autoindex
 `docker exec -it server_ctn /bin/bash` <br />
-`sh usr/srcs/autoindex_switch.sh`
+>$`sh usr/srcs/autoindex_switch.sh`
 
 ### Stop, delete and clean all
 `sh clean.sh`
