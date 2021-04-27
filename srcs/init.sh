@@ -6,8 +6,6 @@ chown -R www-data /var/www/*
 chmod -R 755 /var/www/*
 
 #NGINX
-echo "daemon off;" >> /etc/nginx/nginx.conf
-rm var/www/html/index.nginx-debian.html
 cp ./usr/srcs/nginx.conf /etc/nginx/sites-available/ft_server
 ln -s /etc/nginx/sites-available/ft_server /etc/nginx/sites-enabled/
 rm /etc/nginx/sites-enabled/default

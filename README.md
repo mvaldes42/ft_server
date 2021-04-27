@@ -2,9 +2,10 @@
 
 ## HOW TO RUN THE PROJECT
 ### Start the container
-`sh runs.sh`
-(if port 80 is already in use in the Ubuntu VM, use : <br />
-`sudo ss -lptn 'sport = :80'` and check it with `ps -aux | grep -E '80|443'`)
+Check if ports 80 and 443 are already used : `sudo lsof -i -P -n | grep LISTEN `<br />
+Close services that use those ports : `sudo service <nginx> stop`<br />
+
+Then make and run container`sh runs.sh`
 
 ### Turn on/off autoindex
 `docker exec -it server_ctn /bin/bash` <br />
