@@ -1,6 +1,4 @@
 #!/bin/bash
-service mysql start
-
 mkdir /var/www/ft_server
 chown -R www-data /var/www/*
 chmod -R 755 /var/www/*
@@ -39,4 +37,5 @@ cp /usr/srcs/wp-config.php /var/www/ft_server/wordpress
 
 service php7.3-fpm start
 service nginx start
+service mysql start
 bash
